@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predictive Analysis Telecom</title>
+</head>
+
+<body>
+		<style>
+		body {
+				background-image: url('https://www.tutorialkart.com/sample_image.jpg');
+				background-repeat: no-repeat;
+				background-attachment: fixed;
+				background-size: 100% 100%;
+			 }
+		
+		h3	{
+				font-family: Sans-serif; 
+				color: #73AD21;
+				background: none;
+				margin-left: 4%;
+				margin-right: 4%;
+				font-weight: bold
+			}
+		h1 { 
+				display: block;
+				font-size: 2em;
+				margin-top: 0.67em;
+				margin-bottom: 0.67em;
+				margin-left: 0;
+				margin-right: 0;
+				color: #73AD21;
+				font-weight: bold;
+			}
+		
+		.form-header  {
+				background-color: #EFF0F1;
+				border-top-left-radius: 10px;
+				border-top-right-radius: 10px;
+			}
+		.form-body {
+				margin: auto;
+				width: 60%;
+				border: 3px solid #73AD21;
+				padding: 10px;
+				text-align: center;
+			}
+		.signup-form {
+				font-family: "Roboto", sans-serif;
+				width:650px;
+				margin:30px auto;
+				background:linear-gradient(to right, #ffffff 0%, #fafafa 50%, #ffffff 99%);
+				border-radius: 10px;
+			}
+		.input{
+				text-align: center;
+				width: 80%;
+				padding: 10px 18px;
+				margin: 8px 0;
+				box-sizing: border-box;
+				border-radius: 4px;
+
+			}
+		.button {
+				background-color: #4CAF50; /* Green */
+				border: none;
+				color: white;
+				padding: 15px 32px;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+				font-size: 16px;
+				margin-top: 5px;
+			}
+
+		</style>
+	<!-- form body -->
+    <div class="form-body">
+        <form class="signup-form" action="{{ url_for('predict')}}" method="post">
+		    <h1><b><u> NETWORK SLICING (NS) CLASSIFICATION </u></b></h1>
+            <h3>LTE 5G CATEGORY : (EX 14,15)</h3><input id="first" name="lte_5g_category" class="input" required="required">
+            <h3>TIME : (EX 20,21)</h3><br><input id="second" name="time" class="input" required="required">
+            <h3>PACKET LOSS RATE : (EX 0.000001)</h3><input id="third" name="packet_loss_rate" class="input" required="required">
+            <h3>PACKET DELAY : (EX 100)</h3><br><input id="fourth" name="packet_delay" class="input" required="required">
+			<h3>IOT : (EX 0  1)</h3><br><input id="fifth" name="io_t" class="input" required="required">
+			<h3>LTE 5G : (EX 0  1) </h3><br><input id="sixth" name="lte_5g" class="input" required="required">
+			<h3>GBR : (EX 0  1) </h3><br><input id="seventh" name="gbr" class="input" required="required">
+			<h3>NON GBR : (EX 0  1) </h3><br><input id="eighth" name="non_gbr" class="input" required="required">
+			<h3>AR VR GAMING : (EX 0  1) </h3><br><input id="nineth" name="ar_vr_gaming" class="input" required="required">
+			<h3>HEALTHCARE : (EX 0  1) </h3><br><input id="tenth" name="healthcare" class="input" required="required">
+			<h3>INDUSTRY 4.0 : (EX 0  1) </h3><br><input id="eleventh" name="industry_4_0" class="input" required="required">
+			<h3>IOT DEVICES : (EX 0  1) </h3><br><input id="twelfth" name="io_t_devices" class="input" equired="required">
+			<h3>PUBLIC SAFETY : (EX 0  1) </h3><br><input id="thirteenth" name="public_safety" class="input" required="required">
+			<h3>SMART CITY AND HOME : (EX 0  1) </h3><br><input id="fourteenth" name="smart_city_and_home" class="input" required="required">
+			<h3>SMART TRANSFORMATION : (EX 0  1) </h3><br><input id="fifteenth" name="smart_transportation" class="input" required="required">
+			<h3>SMARTPHONE : (EX 0  1) </h3><br><input id="sixteeth" name="smartphone" class="input" required="required">
+            <br><br><button id="sub" class="button" type="submit ">CLASSIFY</button>
+            <br>
+
+
+        </form>
+
+        <br><br><h3>{{ prediction_text }}<h3>
+    </div>
+
+</body>
+
+</html>
