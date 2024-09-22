@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,108 +7,246 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Predictive Analysis Telecom</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            background-image: url('https://images.pexels.com/photos/683094/pexels-photo-683094.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        
+
+        h1 {
+            font-size: 2.5em;
+            color: #fff;
+            text-align: center;
+            margin: 20px 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .form-body {
+            max-width: 600px;
+            margin: auto;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+        }
+
+        .form-body:hover {
+            transform: scale(1.01);
+        }
+
+        .heading {
+            font-size: 2.5em; /* Adjust size as needed */
+            color: #73AD21; /* Primary color */
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            margin: 20px 0;
+            letter-spacing: 2px; /* Add some spacing between letters */
+            text-transform: uppercase; /* Uppercase for emphasis */
+            background: linear-gradient(90deg, rgba(115,173,33,1) 0%, rgba(255,255,255,1) 100%);
+
+        }
+                h3 {
+            color: #73AD21;
+            margin: 15px 0 5px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+        }
+
+        .icon {
+            margin-right: 10px;
+            color: #73AD21;
+        }
+
+        .input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            transition: border 0.3s, box-shadow 0.3s;
+            font-size: 1em;
+        }
+
+        .input:focus {
+            border-color: #73AD21;
+            box-shadow: 0 0 5px rgba(115, 173, 33, 0.5);
+            outline: none;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 0.9em;
+            height: 20px;
+            margin: -10px 0 10px 0;
+        }
+
+        .button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 16px;
+            margin-top: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+
+        .button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        footer {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 14px;
+            color: #666;
+        }
+
+        @media (max-width: 600px) {
+            .form-body {
+                width: 90%;
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
 </head>
 
 <body>
-		<style>
-		body {
-				background-image: url('https://images.pexels.com/photos/683094/pexels-photo-683094.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
-				background-repeat: no-repeat;
-				background-attachment: fixed;
-				background-size: 100% 100%;
-			 }
-		
-		h3	{
-				font-family: Sans-serif; 
-				color: #73AD21;
-				background: none;
-				margin-left: 4%;
-				margin-right: 4%;
-				font-weight: bold
-			}
-		h1 { 
-				display: block;
-				font-size: 2em;
-				margin-top: 0.67em;
-				margin-bottom: 0.67em;
-				margin-left: 0;
-				margin-right: 0;
-				color: #73AD21;
-				font-weight: bold;
-			}
-		
-		.form-header  {
-				background-color: #EFF0F1;
-				border-top-left-radius: 10px;
-				border-top-right-radius: 10px;
-			}
-		.form-body {
-				margin: auto;
-				width: 60%;
-				border: 3px solid #73AD21;
-				padding: 10px;
-				text-align: center;
-			}
-		.signup-form {
-				font-family: "Roboto", sans-serif;
-				width:650px;
-				margin:30px auto;
-				background:linear-gradient(to right, #ffffff 0%, #fafafa 50%, #ffffff 99%);
-				border-radius: 10px;
-			}
-		.input{
-				text-align: center;
-				width: 80%;
-				padding: 10px 18px;
-				margin: 8px 0;
-				box-sizing: border-box;
-				border-radius: 4px;
-
-			}
-		.button {
-				background-color: #4CAF50; /* Green */
-				border: none;
-				color: white;
-				padding: 15px 32px;
-				text-align: center;
-				text-decoration: none;
-				display: inline-block;
-				font-size: 16px;
-				margin-top: 5px;
-			}
-
-		</style>
-	<!-- form body -->
     <div class="form-body">
-        <form class="signup-form" action="{{ url_for('predict')}}" method="post">
-			<br>
-		    <h1><b><u> NETWORK SLICING (NS) CLASSIFICATION </u></b></h1>
-            <h3>LTE 5G CATEGORY : (EX 14,15)</h3><input id="first" name="lte_5g_category" class="input" required="required">
-            <h3>TIME : (EX 20,21)</h3><br><input id="second" name="time" class="input" required="required">
-            <h3>PACKET LOSS RATE : (EX 0.000001)</h3><input id="third" name="packet_loss_rate" class="input" required="required">
-            <h3>PACKET DELAY : (EX 100)</h3><br><input id="fourth" name="packet_delay" class="input" required="required">
-			<h3>IOT : (EX 0  1)</h3><br><input id="fifth" name="io_t" class="input" required="required">
-			<h3>LTE 5G : (EX 0  1) </h3><br><input id="sixth" name="lte_5g" class="input" required="required">
-			<h3>GBR : (EX 0  1) </h3><br><input id="seventh" name="gbr" class="input" required="required">
-			<h3>NON GBR : (EX 0  1) </h3><br><input id="eighth" name="non_gbr" class="input" required="required">
-			<h3>AR VR GAMING : (EX 0  1) </h3><br><input id="nineth" name="ar_vr_gaming" class="input" required="required">
-			<h3>HEALTHCARE : (EX 0  1) </h3><br><input id="tenth" name="healthcare" class="input" required="required">
-			<h3>INDUSTRY 4.0 : (EX 0  1) </h3><br><input id="eleventh" name="industry_4_0" class="input" required="required">
-			<h3>IOT DEVICES : (EX 0  1) </h3><br><input id="twelfth" name="io_t_devices" class="input" equired="required">
-			<h3>PUBLIC SAFETY : (EX 0  1) </h3><br><input id="thirteenth" name="public_safety" class="input" required="required">
-			<h3>SMART CITY AND HOME : (EX 0  1) </h3><br><input id="fourteenth" name="smart_city_and_home" class="input" required="required">
-			<h3>SMART TRANSFORMATION : (EX 0  1) </h3><br><input id="fifteenth" name="smart_transportation" class="input" required="required">
-			<h3>SMARTPHONE : (EX 0  1) </h3><br><input id="sixteeth" name="smartphone" class="input" required="required">
-            <br><br><button id="sub" class="button" type="submit ">CLASSIFY</button>
-            <br>
-			<br>
+        <form id="predictionForm" action="{{ url_for('predict')}}" method="post">
+            <h1 class="heading">NETWORK SLICING (NS) CLASSIFICATION</h1>
 
+            <label for="first"><h3><i class="fas fa-signal icon"></i>LTE 5G CATEGORY: (EX 14,15)</h3></label>
+            <input id="first" name="lte_5g_category" class="input" placeholder="Enter LTE 5G Category" required>
+            <div class="error-message" id="errorFirst"></div>
 
+            <label for="second"><h3><i class="fas fa-clock icon"></i>TIME: (EX 20,21)</h3></label>
+            <input id="second" name="time" class="input" placeholder="Enter Time" required>
+            <div class="error-message" id="errorSecond"></div>
+
+            <label for="third"><h3><i class="fas fa-chart-line icon"></i>PACKET LOSS RATE: (EX 0.000001)</h3></label>
+            <input id="third" name="packet_loss_rate" class="input" placeholder="Enter Packet Loss Rate" required>
+            <div class="error-message" id="errorThird"></div>
+
+            <label for="fourth"><h3><i class="fas fa-tachometer-alt icon"></i>PACKET DELAY: (EX 100)</h3></label>
+            <input id="fourth" name="packet_delay" class="input" placeholder="Enter Packet Delay" required>
+            <div class="error-message" id="errorFourth"></div>
+
+            <label for="fifth"><h3><i class="fas fa-network-wired icon"></i>IOT: (EX 0 1)</h3></label>
+            <input id="fifth" name="io_t" class="input" placeholder="Enter IoT Value" required>
+            <div class="error-message" id="errorFifth"></div>
+
+            <label for="sixth"><h3><i class="fas fa-signal icon"></i>LTE 5G: (EX 0 1)</h3></label>
+            <input id="sixth" name="lte_5g" class="input" placeholder="Enter LTE 5G Value" required>
+            <div class="error-message" id="errorSixth"></div>
+
+            <label for="seventh"><h3><i class="fas fa-check icon"></i>GBR: (EX 0 1)</h3></label>
+            <input id="seventh" name="gbr" class="input" placeholder="Enter GBR Value" required>
+            <div class="error-message" id="errorSeventh"></div>
+
+            <label for="eighth"><h3><i class="fas fa-times icon"></i>NON GBR: (EX 0 1)</h3></label>
+            <input id="eighth" name="non_gbr" class="input" placeholder="Enter Non GBR Value" required>
+            <div class="error-message" id="errorEighth"></div>
+
+            <label for="nineth"><h3><i class="fas fa-gamepad icon"></i>AR VR GAMING: (EX 0 1)</h3></label>
+            <input id="nineth" name="ar_vr_gaming" class="input" placeholder="Enter AR/VR Gaming Value" required>
+            <div class="error-message" id="errorNinth"></div>
+
+            <label for="tenth"><h3><i class="fas fa-heartbeat icon"></i>HEALTHCARE: (EX 0 1)</h3></label>
+            <input id="tenth" name="healthcare" class="input" placeholder="Enter Healthcare Value" required>
+            <div class="error-message" id="errorTenth"></div>
+
+            <label for="eleventh"><h3><i class="fas fa-industry icon"></i>INDUSTRY 4.0: (EX 0 1)</h3></label>
+            <input id="eleventh" name="industry_4_0" class="input" placeholder="Enter Industry 4.0 Value" required>
+            <div class="error-message" id="errorEleventh"></div>
+
+            <label for="twelfth"><h3><i class="fas fa-mobile-alt icon"></i>IOT DEVICES: (EX 0 1)</h3></label>
+            <input id="twelfth" name="io_t_devices" class="input" placeholder="Enter IoT Devices Value" required>
+            <div class="error-message" id="errorTwelfth"></div>
+
+            <label for="thirteenth"><h3><i class="fas fa-shield-alt icon"></i>PUBLIC SAFETY: (EX 0 1)</h3></label>
+            <input id="thirteenth" name="public_safety" class="input" placeholder="Enter Public Safety Value" required>
+            <div class="error-message" id="errorThirteenth"></div>
+
+            <label for="fourteenth"><h3><i class="fas fa-city icon"></i>SMART CITY AND HOME: (EX 0 1)</h3></label>
+            <input id="fourteenth" name="smart_city_and_home" class="input" placeholder="Enter Smart City and Home Value" required>
+            <div class="error-message" id="errorFourteenth"></div>
+
+            <label for="fifteenth"><h3><i class="fas fa-car icon"></i>SMART TRANSFORMATION: (EX 0 1)</h3></label>
+            <input id="fifteenth" name="smart_transportation" class="input" placeholder="Enter Smart Transformation Value" required>
+            <div class="error-message" id="errorFifteenth"></div>
+
+            <label for="sixteenth"><h3><i class="fas fa-mobile icon"></i>SMARTPHONE: (EX 0 1)</h3></label>
+            <input id="sixteenth" name="smartphone" class="input" placeholder="Enter Smartphone Value" required>
+            <div class="error-message" id="errorSixteenth"></div>
+
+            <button id="sub" class="button" type="submit">CLASSIFY</button>
         </form>
-
-        <br><br><h3>{{ prediction_text }}<h3>
+        <h3>{{ prediction_text }}</h3>
     </div>
+    <footer>
+        &copy; 2024 Predictive Analysis Telecom | All Rights Reserved
+    </footer>
 
+    <script>
+        const form = document.getElementById('predictionForm');
+        const inputs = form.querySelectorAll('.input');
+        const errors = [];
+
+        form.addEventListener('submit', function (e) {
+            let isValid = true;
+
+            inputs.forEach((input, index) => {
+                const errorMessage = document.getElementById(`error${input.id.charAt(0).toUpperCase() + input.id.slice(1)}`);
+                errorMessage.textContent = ''; // Clear previous error
+
+                if (!input.value) {
+                    isValid = false;
+                    errorMessage.textContent = 'This field is required.';
+                }
+            });
+
+            if (!isValid) {
+                e.preventDefault(); // Prevent form submission
+            } else {
+                // Simulate loading state
+                const button = document.getElementById('sub');
+                button.disabled = true;
+                button.textContent = 'Classifying...';
+            }
+        });
+    </script>
 </body>
 
 </html>
+
+

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,130 +6,162 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Predictive Analysis Telecom</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('https://images.pexels.com/photos/683094/pexels-photo-683094.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
 
+        h1 {
+            font-size: 2.5em;
+            color: #73AD21;
+            text-align: center;
+            margin: 20px 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .section {
+            max-width: 800px;
+            margin: 30px auto;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            color: #73AD21;
+            text-decoration: underline;
+            margin-bottom: 10px;
+        }
+
+        .content {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        b {
+            color: #73AD21;
+        }
+
+        .form-body {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .prediction-text {
+            font-size: 1.5em;
+            color: #4CAF50;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+
+        .signup-form {
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #45a049; /* Darker green */
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            color: #333;
+        }
+    </style>
 </head>
-	<p> 
-	<br>
-	<form class="signup-form">
-	<b> <u> ABOUT </u> </b> <br>
-	<br>
-	The telecom industry is going through a massive digital transformation with the adoption of ML, AI, feedback-based automation and
-	advanced analytics to handle the next generation applications and services. AI concepts are not new; the algorithms used by Machine
-	Learning and Deep Learning are being currently implemented in various industries and technology verticals. With growing data and
-	immense volume of information over 5G, the ability to predict data proactively, swiftly and with accuracy, is critically important. Data-driven decision
-	making will be vital in future communication networks due to the traffic explosion and Artificial Intelligence (AI) will accelerate the 5G
-	network performance. <br>
-	Mobile operators are looking for a programmable solution that will allow them to accommodate multiple independent tenants on the same
-	physical infrastructure and 5G networks allow for end-to-end network resource allocation using the concept of Network Slicing (NS).
-	Network Slicing will play a vital role in enabling a multitude of 5G applications, use cases, and services. Network slicing functions will
-	provide an end-to-end isolation between slices with an ability to customize each slice based on the service demands (bandwidth,
-	coverage, security, latency, reliability, etc). <br>
-	Your Task is to build a Machine Learning model that will be able to to proactively detect and eliminate threats based on incoming
-	connections thereby selecting the most appropriate network slice, even in case of a network failure. <br>
-	<br>
-	</form>
-	</p>
-		<form class="signup-form">
-	<b> <u> Dataset Description </u> </b> <br>
-	<br>
-	<b>LTE/5g</b> - User Equipment categories or classes to define the performance specifications <br>
-	<b>Packet Loss Rate</b> - number of packets not received divided by the total number of packets sent. <br>
-	<b>Packet Delay</b> - The time for a packet to be received. <br>
-	<b>Slice type</b> - network configuration that allows multiple networks (virtualized and independent) <br>
-	<b>GBR - Guaranteed Bit Rate</b> <br>
-	<b>Healthcare - Usage in Healthcare (1 or 0)</b> <br>
-	<b>Industry 4.0 - Usage in Digital Enterprises(1 or 0)</b> <br>
-	<b>IoT Devices - Usage</b> <br>
-	<b>Public Safety - Usage for public welfare and safety purposes (1 or 0)</b> <br>
-	<b>Smart City & Home - usage in daily household chores</b> <br>
-	<b>Smart Transportation - usage in public transportation</b> <br>
-	<b>Smartphone - whether used for smartphone cellular data</b> <br>
-	
-	</form>
-	</p>
 
 <body>
-		<style>
-		body {
-				background-image: url('https://images.pexels.com/photos/683094/pexels-photo-683094.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
-				background-repeat: no-repeat;
-				background-attachment: fixed;
-				background-size: 100% 100%;
-			 }
-		
-		h3	{
-				font-family: Sans-serif; 
-				color: #73AD21;
-				background: none;
-				margin-left: 4%;
-				margin-right: 4%;
-				font-weight: bold
-			}
-		h1 { 
-				display: block;
-				font-size: 2em;
-				margin-top: 0.67em;
-				margin-bottom: 0.67em;
-				margin-left: 0;
-				margin-right: 0;
-				color: #73AD21;
-				font-weight: bold;
-			}
-		
-		.form-header  {
-				background-color: #EFF0F1;
-				border-top-left-radius: 10px;
-				border-top-right-radius: 10px;
-			}
-		.form-body {
-				margin: auto;
-				width: 60%;
-				border: 3px solid #73AD21;
-				padding: 10px;
-				text-align: center;
-			}
-		.signup-form {
-				font-family: "Roboto", sans-serif;
-				width:780px;
-				margin:45px auto;
-				background:linear-gradient(to right, #ffffff 0%, #fafafa 50%, #ffffff 99%);
-				border-radius: 5px;
-			}
-		.input{
-				text-align: center;
-				width: 80%;
-				padding: 10px 18px;
-				margin: 8px 0;
-				box-sizing: border-box;
-				border-radius: 4px;
+    <h1>Network Slicing Results - Category</h1>
 
-			}
-		.button {
-				background-color: #4CAF50; /* Green */
-				border: none;
-				color: white;
-				padding: 15px 32px;
-				text-align: center;
-				text-decoration: none;
-				display: inline-block;
-				font-size: 16px;
-				margin-top: 5px;
-			}
-
-		</style>
-	<!-- form body -->
-    <div class="form-body">
-        <form class="signup-form" action="{{ url_for('predict')}}" method="post">
-		
-            <br>
-			<br><br><h3>{{ prediction_text }}<h3>
-			<br><br>
-
-        </form>
-
-        
+    <div class="section">
+        <div class="content">
+            <div class="section-title">ABOUT</div>
+            <p>
+                The telecom industry is undergoing a massive digital transformation with the adoption of ML, AI, feedback-based automation, and
+                advanced analytics to handle the next generation applications and services. AI concepts are not new; the algorithms used by Machine
+                Learning and Deep Learning are currently implemented in various industries and technology verticals. With growing data and
+                immense volume of information over 5G, the ability to predict data proactively, swiftly, and accurately is critically important. Data-driven decision
+                making will be vital in future communication networks due to the traffic explosion, and Artificial Intelligence (AI) will accelerate the 5G
+                network performance.
+            </p>
+            <p>
+                Mobile operators are looking for a programmable solution that will allow them to accommodate multiple independent tenants on the same
+                physical infrastructure. 5G networks allow for end-to-end network resource allocation using the concept of Network Slicing (NS).
+                Network Slicing will play a vital role in enabling a multitude of 5G applications, use cases, and services. Network slicing functions will
+                provide an end-to-end isolation between slices with the ability to customize each slice based on the service demands (bandwidth,
+                coverage, security, latency, reliability, etc).
+            </p>
+            <p>
+                Your task is to build a Machine Learning model that will be able to proactively detect and eliminate threats based on incoming
+                connections, thereby selecting the most appropriate network slice, even in the case of a network failure.
+            </p>
+        </div>
     </div>
 
+    <div class="section">
+        <div class="content">
+            <div class="section-title">DATASET DESCRIPTION</div>
+            <p><b>LTE/5G</b>: User Equipment categories or classes to define the performance specifications.</p>
+            <p><b>Packet Loss Rate</b>: Number of packets not received divided by the total number of packets sent.</p>
+            <p><b>Packet Delay</b>: The time for a packet to be received.</p>
+            <p><b>Slice Type</b>: Network configuration that allows multiple networks (virtualized and independent).</p>
+            <p><b>GBR - Guaranteed Bit Rate</b>.</p>
+            <p><b>Healthcare</b>: Usage in Healthcare (1 or 0).</p>
+            <p><b>Industry 4.0</b>: Usage in Digital Enterprises (1 or 0).</p>
+            <p><b>IoT Devices</b>: Usage.</p>
+            <p><b>Public Safety</b>: Usage for public welfare and safety purposes (1 or 0).</p>
+            <p><b>Smart City & Home</b>: Usage in daily household chores.</p>
+            <p><b>Smart Transportation</b>: Usage in public transportation.</p>
+            <p><b>Smartphone</b>: Whether used for smartphone cellular data.</p>
+        </div>
+    </div>
+
+    <div class="form-body">
+        <form class="signup-form" action="{{ url_for('predict')}}" method="post">
+            <h3 class="prediction-text">{{ prediction_text }}</h3>
+            <button class="button" type="submit">Classify</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Network Slicing Information. All rights reserved.</p>
+        <p>For more information, contact ~Debmalya Ray~</p>
+    </footer>
 </body>
 
 </html>
+
+
