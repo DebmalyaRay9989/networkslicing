@@ -25,11 +25,7 @@ def predict():
     prediction = 0
     if request.method == 'POST':
         lte_5g_category = int(request.form['lte_5g_category'])
-        time_value = request.form['time']
-        hours, minutes = time_value.split(':')
-        hours = int(hours)
-        minutes = int(minutes)
-        time = hours * 60 + minutes
+        time = int(request.form['time'])
         packet_loss_rate = float(request.form['packet_loss_rate'])
         packet_delay = int(request.form['packet_delay'])
         io_t = int(request.form['io_t'])
